@@ -1048,10 +1048,12 @@ func (p *parser) readSingleLineComment() string {
 			p.unread()
 			break
 		}
+		if c := p.read(); c == '*' {
+			p.unread()
+			p.unread()
+			break
+		}
 		if c := p.read(); c != '/' {
-			if c == '*' {
-				p.unread()
-			}
 			p.unread()
 			break
 		}
