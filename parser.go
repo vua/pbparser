@@ -1049,6 +1049,9 @@ func (p *parser) readSingleLineComment() string {
 			break
 		}
 		if c := p.read(); c != '/' {
+			if c == '*' {
+				p.unread()
+			}
 			p.unread()
 			break
 		}
@@ -1145,6 +1148,10 @@ func isValidCharInWord(c rune, f func(r rune) bool) bool {
 
 func isStartOfComment(c rune) bool {
 	return c == '/'
+}
+
+func isStartOfMultiComment(c rune) bool {
+
 }
 
 func isWhitespace(c rune) bool {
