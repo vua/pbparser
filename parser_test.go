@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/tallstoat/pbparser"
+	"github.com/vua/pbparser"
 )
 
 const (
