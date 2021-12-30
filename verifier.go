@@ -55,9 +55,9 @@ func verify(pf *ProtoFile, p ImportModuleProvider) error {
 	packageNames := getDependencyPackageNames(pf.PackageName, m)
 
 	// check if imported packages are in use
-	if err := areImportedPackagesUsed(pf, packageNames); err != nil {
-		return err
-	}
+	//if err := areImportedPackagesUsed(pf, packageNames); err != nil {
+	//	return err
+	//}
 
 	// validate if the NamedDataType fields of messages (deep ones as well) are all defined in the model;
 	// either the main model or in dependencies
