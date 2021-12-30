@@ -1150,10 +1150,6 @@ func isStartOfComment(c rune) bool {
 	return c == '/'
 }
 
-func isStartOfMultiComment(c rune) bool {
-
-}
-
 func isWhitespace(c rune) bool {
 	return c == ' ' || c == '\t' || c == '\r' || c == '\n'
 }
